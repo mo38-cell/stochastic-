@@ -3,7 +3,7 @@ import pandas as pd
 import streamlit as st
 import yfinance as yf
 
-st.set_page_config(page_title="FX 逆張りシグナル", layout="wide")
+st.set_page_config(page_title="Stochastic", layout="wide")
 st.caption("Stochastic (14, 3, 5) | 買い ≤ 7 / 売り ≥ 93 | 確定足のみ")
 
 CURRENCIES = ["USD", "JPY", "GBP", "EUR", "AUD"]
