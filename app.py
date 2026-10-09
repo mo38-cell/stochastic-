@@ -1,13 +1,21 @@
-import itertools
 import pandas as pd
 import streamlit as st
 import yfinance as yf
 
 st.set_page_config(page_title="Stochastic", layout="wide")
-st.caption("Stochastic (14, 3, 5) | 買い ≤ 7 / 売り ≥ 93 | 確定足のみ")
 
-CURRENCIES = ["USD", "JPY", "GBP", "EUR", "AUD"]
-PAIRS = [f"{a}{b}" for a, b in itertools.combinations(CURRENCIES, 2)]
+PAIRS = [
+    "USDJPY",
+    "GBPUSD",
+    "EURUSD",
+    "AUDUSD",
+    "GBPJPY",
+    "EURJPY",
+    "AUDJPY",
+    "EURGBP",
+    "GBPAUD",
+    "EURAUD",
+]
 TIMEFRAMES = {"5分足": ("5m", "5d", 1), "15分足": ("15m", "5d", 1),
               "30分足": ("30m", "5d", 1), "1時間足": ("60m", "1mo", 1),
               "4時間足": ("60m", "1mo", 4), "日足": ("1d", "6mo", 1)}
